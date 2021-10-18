@@ -1,0 +1,78 @@
+html, body{
+    margin: 0;
+    
+    
+    height: 100%;
+    width: 100%;
+}
+.sky{
+    position: relative;
+    
+    width: 100%;
+    height: 40%;
+    background: skyblue;
+}
+.grass{
+    position: relative;
+    height: 30%;
+    background: springgreen;
+}
+.road{
+    position: relative;
+    height: 30%;
+    background:grey;
+}
+.line {
+    position: absolute;
+    top:50%;
+    height: 0px;
+    border: honeydew 5px dashed;
+    width: 100%;
+}
+
+.cloud:nth-child(1){
+    position: absolute;
+    top: 0px;
+    opacity: .3;
+    left: 400px;
+    top: 130px;
+    height:40% ;
+    animation: wind 40s linear infinite reverse;
+}
+.cloud:nth-child(2){
+    position: absolute;
+    top: 50px;
+    left: 500px;
+    opacity: .8;
+    height: 50%;
+    animation: wind 30s linear infinite reverse;
+    
+}
+
+
+.rider1{
+    position: absolute;
+    height: 30%;
+    top: 15%;
+    animation: race 4s 1s linear  infinite normal both,
+                  jump 1s 2s ease  both;
+}
+#rider2{
+    position: absolute;
+    height: 30%;
+    top: 60%;
+}
+@keyframes wind{
+    from{left: -300px}
+    to{left: 100%}
+}
+@keyframes race {
+    from{transform: translateX(-100px)}
+    to{transform: translateX(1800px)}
+    
+}
+@keyframes jump{
+    0%{top: 15%}
+    50%{top: -30%}
+    100%{top: 15%}
+}
